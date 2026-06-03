@@ -5,7 +5,7 @@ import postgres from 'postgres';
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
  
-import { signIn } from '../seed/src/auth'
+import { signIn } from '../api/auth'
 import { AuthError } from 'next-auth'; 
 
 const sql = postgres(process.env.POSTGRES_URL!, { ssl: 'require' });
