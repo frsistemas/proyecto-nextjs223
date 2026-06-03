@@ -1,16 +1,20 @@
-import type { NextConfig } from 'next';
-import path from 'path';
+/*import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
- // experimental: {
-  /* config options here */
-  turbopack: {
-    root: path.resolve(__dirname),
-  },
 
-outputFileTracingRoot: path.resolve(__dirname),
   
 };
 
-export default nextConfig;
+export default nextConfig;*/
 
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  experimental: {
+    // Desactiva el paralelismo masivo de hilos independientes
+    workerThreads: false, 
+    // Define el número máximo de núcleos/hilos a usar (ej: 1 o 2)
+   //cpus: 1, 
+  },
+};
+
+module.exports = nextConfig;
